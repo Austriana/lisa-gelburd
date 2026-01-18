@@ -1,0 +1,294 @@
+/* #region debug*/
+*{
+    color: rgba(255, 255, 255, 0);
+    /* outline: 1px solid red !important; */
+}
+/* #endregion debug*/
+/* #region all default*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color: rgba(65, 59, 59, 0.9);
+    /* overflow-wrap: break-word;
+    word-break: normal; 
+    hyphens: auto; */
+    user-select: none;
+-webkit-tap-highlight-color: transparent; 
+}
+/* #endregion all default*/
+/* #region body html h* */
+html, body {
+    overflow-x: clip;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to bottom, #88B77B, #a1968c);
+}
+h1, h2, h3, h4, h5, h6, section h1{
+    overflow-wrap: normal;
+    word-break: normal;
+}
+/* #endregion*/
+/* #region header */
+header {
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    flex-direction: column;
+    background-image: url('/pic/header-background.jpg');
+    background-size: 110% 110%;
+    background-position: center;
+    text-align: center;
+    background-repeat: no-repeat;
+}
+header h1 {
+    z-index: 2;
+    font-size: 2.5em;
+}
+header a {
+    z-index: 2;
+    background: #F3E9DD;
+    text-decoration: none;
+    border-radius: 5px;
+}
+/* #endregion header */
+/* #region nav */
+nav {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background: #F3E9DD;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    z-index: 10;
+}
+nav a {
+    text-decoration: none;
+    margin: 0 15px;
+    white-space: nowrap;
+}
+nav a:hover {
+    color: #A47551;
+}
+/* #endregion nav */
+/* #region section */
+section {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: rgb(243 233 221);
+    border-radius: 30px;
+    margin: 10px auto;
+    width: calc(100% - 30px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    cursor: pointer;
+    scroll-margin-top: 55px;
+    position: relative;
+}
+section h2 {
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+.intro {
+    display: grid;
+    grid-template-columns: 3fr 1fr; 
+    align-items: center;
+}
+.intro span{
+    margin: auto;
+}
+.intro .icon {
+    font-size: 5rem;
+    color: linear-gradient(to right, #88B77B, #a1968c);
+    margin-left: 15px;
+    line-height: 0;
+}
+
+.container, .containerGrid{
+    display: none;
+}
+.notShow{
+    display: none;
+}
+.showGrid{
+    display: grid;
+}
+.show{
+    display: block;
+}
+.containerGrid {
+    grid-template-columns: 1fr 350px;
+    grid-template-areas: 
+        "oben-links bild-rechts"
+        "unten-breit unten-breit";
+    align-items: center;
+    padding: 40px;
+    
+}
+.containerGrid .content{
+    grid-area: oben-links;
+}
+.containerGrid ul{
+    margin-left: 16px;
+}
+.containerGrid img{ 
+    grid-area: bild-rechts; 
+    width: 60%; 
+    height: auto; 
+    border-radius: 12px;
+    justify-self: center;
+}
+.containerGrid > div:last-of-type{
+    grid-area: unten-breit;
+}
+/* #endregion section */
+/* #region footer */
+footer {
+    text-align: center;
+    background: rgb(243 233 221);
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+}
+/* #endregion footer */
+/* #region hamburger */
+#hamburger {
+    display: none;
+}
+#hamburger span {
+    background: rgb(139 177 126);
+    height: 3px;
+    width: 25px;
+    border-radius: 2px;
+}
+/* #endregion hamburger */
+/* #region menu */
+#menu {
+    display: none;
+    list-style: none;
+    padding: 10px;
+    flex-direction: column;
+    position: fixed;
+    max-width: 50vh;
+    min-width: fit-content;
+    height: 100%;
+    background-color: rgba(139, 177, 126);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#menu.show {
+    display: flex;
+    width: fit-content;
+    text-align: center;
+    line-height: 20px;
+}
+#menu a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    font-size: 1em;
+    display: block;
+}
+#menu a:hover {
+    background: #ddd;
+    border-radius: 5px;
+}
+/* #endregion menu */
+/* #region kontakt button */
+#kontakt {
+    display: inline-block;
+    margin-top: 20px;
+    background: #fcd182;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1em;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+#kontakt:hover {
+    background: #f1af34;
+}
+/* #endregion kontact */
+/* #region media */
+@media (max-width: 1000px) {
+    header div {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+    }
+    #hamburger {
+        position: fixed;
+        top: 5px;
+        left: 0px;
+        padding: 8px;
+    }
+    #menu {
+        top: 0;
+    }
+    #menu a {
+        font-size: 1.2em;
+    }
+    nav {
+        display: none;
+    }
+    #hamburger {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        width: auto;
+        padding: 10px;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 50px;
+        border: 1px solid rgb(139 177 126);
+    }
+    section {
+        scroll-margin-top: 10px;
+    }
+    .containerGrid {
+        padding: 5px;
+        grid-template-columns: 1fr;
+        grid-template-areas:    "bild-rechts"
+                                "oben-links"
+                                "unten-breit";
+        gap: 20px;
+    }
+    .containerGrid img {
+        max-width: 300px;
+        width: 100%;
+        justify-self: center;
+        margin-bottom: 10px;
+    }
+    section h2 {
+        font-size: 1.35em;
+    }
+    .intro {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .intro .icon {
+        font-size: 3rem;
+        margin: 20px 0 10px 0;
+        text-align: center; 
+    }
+}
+/* #endregion media */
