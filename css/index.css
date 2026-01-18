@@ -42,7 +42,7 @@ header {
     text-align: center;
     position: relative;
     flex-direction: column;
-    background-image: url('/pic/header-background.jpg');
+    background-image: url('../pic/header-background.jpg');
     background-size: 110% 110%;
     background-position: center;
     text-align: center;
@@ -291,4 +291,5 @@ footer {
         text-align: center; 
     }
 }
+
 /* #endregion media */
