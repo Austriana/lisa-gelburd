@@ -17,12 +17,13 @@
 /* #endregion all default*/
 /* #region body html h* */
 html, body {
-    overflow-x: clip;    
+    overflow-x: clip;
 }
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background: linear-gradient(to bottom, #88B77B, #a1968c);
+    height: 100%;    
 }
 h1, h2, h3, h4, h5, h6, section h1{
     overflow-wrap: normal;
@@ -106,7 +107,7 @@ section h2 {
 }
 .intro .icon {
     font-size: 3rem;
-    color: linear-gradient(to right, #88B77B, #a1968c);
+    color: #88B77B;
     margin-left: 15px;
     line-height: 0;
 }
@@ -155,6 +156,8 @@ footer {
     background: rgb(243 233 221);
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
     padding: 10px;
+    height: 45px;
+    min-height: fit-content;
 }
 /* #endregion footer */
 /* #region hamburger */
@@ -284,10 +287,13 @@ footer {
         gap: 10px;
     }
     .intro .icon {
+        display: inline-block; /* Essential: Allows transformation without ghost space */
         font-size: 3rem;
-        rotate: 90deg;
-        margin: 20px 0 10px 0;
-        text-align: center; 
+        color: #88B77B;
+        margin-left: auto;
+        line-height: 1;        /* Prevents line-height from adding extra vertical padding */
+        transform: rotate(90deg);
+        transform-origin: center; /* Ensures it rotates in place without shifting the grid */
     }
 }
 /* #endregion media */
