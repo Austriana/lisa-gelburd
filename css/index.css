@@ -259,7 +259,7 @@ footer {
         z-index: 1000;
         background: rgba(255, 255, 255, 0.9);
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        border-radius: 50px;
+        border-radius: 50%;
         border: 1px solid rgb(139 177 126);
     }
     section {
@@ -287,13 +287,13 @@ footer {
         gap: 10px;
     }
     .intro .icon {
-        display: inline-block; /* Essential: Allows transformation without ghost space */
+        display: inline-block;
         font-size: 3rem;
         color: #88B77B;
         margin-left: auto;
-        line-height: 1;        /* Prevents line-height from adding extra vertical padding */
+        line-height: 1;
         transform: rotate(90deg);
-        transform-origin: center; /* Ensures it rotates in place without shifting the grid */
+        transform-origin: center;
     }
 }
 /* #endregion media */
