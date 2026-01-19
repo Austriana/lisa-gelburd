@@ -1,6 +1,17 @@
-* {
+:root{
+    --text: rgb(65 59 59);
+    --gradientTop: rgb(139 177 126);
+    --gradientbottom: rgb(161 150 140);
+    --boxShadow: rgba(0, 0, 0, 0.1);
+    --button: rgb(214 181 150);
+    --hover:  rgb(201 159 123);
+    --sectionBgnd: rgb(243 233 221);
+    --footerBgnd: rgb(243 233 221);
+}
+*{
     padding: 0;
     margin: 0;
+    color: var(--text);
     box-sizing: border-box;
     overflow-wrap: break-word; 
     hyphens: auto; 
@@ -10,59 +21,54 @@ html, body {
     padding: 0;
     overflow-x: clip; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(to bottom, rgba(139, 177, 126), #a1968c);
-    color: #333;
+    background: linear-gradient(to bottom, var(--gradientTop), var(--gradientbottom));
 }
-.legal-container {
+main{
     max-width: 800px;
     margin: 60px auto;
     padding: 40px;
-    background-color: rgba(255, 255, 255, 0.4);
-    background: rgba(255, 255, 255, 0.9);
+    background-color: var(--sectionBgnd);
     border-radius: 30px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px var(--boxShadow);
+    width: calc(100% - 30px);
 }
-h1 {
-    color: #2c3e50;
+h1{
     margin-bottom: 40px;
     font-size: 2rem;
-    border-left: 5px solid #4a6a8a;
-    padding-left: 15px;
 }
-.legal-block {
+section{
     margin-bottom: 30px;
 }
-.legal-block h2 {
+section h2{
     font-size: 1.1rem;
-    color: #4a6a8a;
     margin-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-.legal-block p {
+section p{
     line-height: 1.7;
     margin: 0;
 }
-.legal-block a {
-    color: #4a6a8a;
+section a{
+    color: var(--button);
     text-decoration: none;
     border-bottom: 1px solid transparent;
-    transition: border-color 0.3s;
 }
-.legal-block a:hover {
-    border-bottom: 1px solid #4a6a8a;
+section a:hover{
+    color: var(--hover);
+    text-decoration: underline;
 }
-footer {
+
+footer{
     text-align: center;
     padding: 10px;
     height: 45px;
     min-height: fit-content;
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    background: var(--footerBgnd);
+    box-shadow: 0 -2px 5px var(--boxShadow);
 }
-.back-button {
-    background-color: rgba(139, 177, 126);
-    color: white;
+button{
+    background-color: var(--button);
     padding: 10px 20px;
     font-size: 1.2em;
     border: none;
@@ -72,8 +78,8 @@ footer {
     display: inline-block;
     margin: 20px 0;
 }
-.back-button:hover {
-    background-color: #218838;
+button:hover{
+    background-color: var(--hover);
 }
 @media (max-width: 768px) {
     .legal-container {

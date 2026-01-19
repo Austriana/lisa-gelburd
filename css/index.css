@@ -1,3 +1,21 @@
+/* #region color*/
+:root{
+    --theme: rgb(201 204 177);
+    --text: rgb(65 59 59);
+    --arrow: rgb(201 159 123);
+    --gradientTop: rgb(139 177 126);
+    --gradientbottom: rgb(161 150 140);
+    --border: rgb(139 177 126);
+    --boxShadow: rgba(0, 0, 0, 0.1);
+    --button: rgb(214 181 150);
+    --hover:  rgb(201 159 123);
+    --hamburger: rgb(139 177 126);
+    --hamburgerBgnd:rgba(255, 255, 255, 0.9);
+    --headerBgnd: rgb(243 233 221);
+    --sectionBgnd: rgb(243 233 221);
+    --footerBgnd: rgb(243 233 221);
+}
+/* #endregion color*/
 /* #region debug*/
 *{
     color: rgba(255, 255, 255, 0);
@@ -10,7 +28,7 @@
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    color: rgba(65, 59, 59, 0.9);
+    color: var(--text);
     user-select: none;
     -webkit-tap-highlight-color: transparent; 
 }
@@ -22,7 +40,7 @@ html, body {
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background: linear-gradient(to bottom, #88B77B, #a1968c);
+    background: linear-gradient(to bottom, var(--gradientTop), var(--gradientbottom));
     height: 100%;    
 }
 h1, h2, h3, h4, h5, h6, section h1{
@@ -52,7 +70,7 @@ header h1 {
 }
 header a {
     z-index: 2;
-    background: #F3E9DD;
+    background: var(--headerBgnd);
     text-decoration: none;
     border-radius: 5px;
 }
@@ -62,8 +80,8 @@ nav {
     width: 100%;
     position: sticky;
     top: 0;
-    background: #F3E9DD;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: var(--headerBgnd);
+    box-shadow: 0 2px 5px var(--boxShadow);
     padding: 10px 0;
     text-align: center;
     width: 100%;
@@ -75,18 +93,18 @@ nav a {
     white-space: nowrap;
 }
 nav a:hover {
-    color: #A47551;
+    color: var(--hover);
 }
 /* #endregion nav */
 /* #region section */
 section {
     max-width: 1000px;
     margin: 0 auto;
-    background: rgb(243 233 221);
+    background: var(--sectionBgnd);
     border-radius: 30px;
     margin: 10px auto;
     width: calc(100% - 30px);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 10px var(--boxShadow);
     padding: 40px;
     cursor: pointer;
     scroll-margin-top: 55px;
@@ -106,7 +124,7 @@ section h2 {
 }
 .intro .icon {
     font-size: 3rem;
-    color: #88B77B;
+    color: var(--arrow);
     margin-left: 15px;
     line-height: 0;
 }
@@ -152,8 +170,8 @@ section h2 {
 /* #region footer */
 footer {
     text-align: center;
-    background: rgb(243 233 221);
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    background: var(--footerBgnd);
+    box-shadow: 0 -2px 5px var(--boxShadow);
     padding: 10px;
     height: 45px;
     min-height: fit-content;
@@ -164,7 +182,7 @@ footer {
     display: none;
 }
 #hamburger span {
-    background: rgb(139 177 126);
+    background: var(--hamburger);
     height: 3px;
     width: 25px;
     border-radius: 2px;
@@ -181,8 +199,8 @@ footer {
     width: 50%;
     min-width: min-content;
     height: 100%;
-    background-color: rgb(210 211 191);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    background-color: var(--theme);
+    box-shadow: 0 2px 10px var(--boxShadow);
     z-index: 2;
     flex-wrap: wrap;
     justify-content: center;
@@ -201,26 +219,22 @@ footer {
     font-size: 1em;
     display: block;
 }
-#menu a:hover {
-    background: #ddd;
-    border-radius: 5px;
-}
 /* #endregion menu */
 /* #region kontakt button */
 #kontakt {
     display: inline-block;
     margin-top: 20px;
-    background: #fcd182;
+    background: var(--button);
     color: white;
     padding: 10px 20px;
     text-decoration: none;
     font-size: 1em;
     border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px var(--boxShadow);
     transition: all 0.3s ease;
 }
 #kontakt:hover {
-    background: #f1af34;
+    background: var(--hover);
 }
 /* #endregion kontact */
 /* #region media */
@@ -256,10 +270,10 @@ footer {
         top: 10px;
         left: 10px;
         z-index: 1000;
-        background: rgba(255, 255, 255, 0.9);
+        background: var(--hamburgerBgnd);
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         border-radius: 50%;
-        border: 1px solid rgb(139 177 126);
+        border: 1px solid var(--hamburger);
     }
     section {
         scroll-margin-top: 10px;
@@ -288,7 +302,6 @@ footer {
     .intro .icon {
         display: inline-block;
         font-size: 3rem;
-        color: #88B77B;
         margin-left: auto;
         line-height: 1;
         transform: rotate(90deg);
